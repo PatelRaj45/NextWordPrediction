@@ -88,34 +88,32 @@ with right:
 
 st.markdown("")
 
-# ── predict button / slim result card ───────────────────────────────────────
+# --- predict button / slim result card ------------------------------------
 if st.button("🔮  Predict next word", type="primary"):
     next_word = predict_next_word(user_text.strip())
 
-    # label sits outside the card so the card can stay tiny
     st.caption("Predicted word")
 
     st.markdown(
         f"""
-        <div style='max-width: 320px;                        /* narrower */
-                    margin: 0 auto;  
-                    background: #F7F2FF;
-                    padding: 0.75rem 1rem;                  /* less padding */
-                    border-radius: 0.6rem;
-                    border: 1px solid {ACCENT}33;
-                    box-shadow: 0 2px 5px rgba(0,0,0,0.05);'>
-            <span style='font-size: 1.4rem;                 /* smaller text */
-                         font-weight: 600;
-                         color: {ACCENT};
-                         display: block;
-                         text-align: center;'>
+        <div style="max-width:320px;
+                    margin:0 auto;
+                    background:#F7F2FF;
+                    padding:0.75rem 1rem;
+                    border:1px solid {ACCENT}33;
+                    border-radius:0.6rem;
+                    box-shadow:0 2px 5px rgba(0,0,0,0.05);">
+            <span style="font-size:1.4rem;
+                         font-weight:600;
+                         color:{ACCENT};
+                         display:block;
+                         text-align:center;">
                 {next_word}
             </span>
         </div>
         """,
         unsafe_allow_html=True,
     )
-
 
 # ── footer ────────────────────────────────────────────────────────────────
 st.markdown(
