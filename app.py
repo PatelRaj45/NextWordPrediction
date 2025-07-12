@@ -115,8 +115,6 @@ if st.button("🔮  Predict next word", type="primary"):
         """,
         unsafe_allow_html=True,
     )
-
-
 # ── footer ────────────────────────────────────────────────────────────────
 st.markdown(
     "<hr style='margin-top:3rem;'><div style='text-align:center;'>"
